@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Research: domain pretraining helps</title>
+  <desc id="desc">On PubMed 20k RCT, SciBERT reached 85.65% accuracy against 84.20% for BERT. Phase 1, transformer fine-tuning, is complete. Phase 2, multi-label sequential sentence classification with LLMs, is in progress. Phase 3, a context-aware framework, is planned.</desc>
+  <style>
+    .bg { fill: #0e1426; }
+    .frame { fill: none; stroke: #26304d; }
+    .rule { stroke: #26304d; }
+    .serif { font-family: Newsreader, "Iowan Old Style", Charter, Georgia, "Times New Roman", serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
+    .eyebrow { fill: #89ccec; font-size: 13px; letter-spacing: 2.4px; }
+    .title { fill: #e9ecf4; font-size: 36px; letter-spacing: -0.6px; }
+    .title-em { fill: #89ccec; font-style: italic; }
+    .body { fill: #b0b8cc; font-size: 19px; }
+    .label { fill: #b0b8cc; font-size: 12px; letter-spacing: 1px; }
+    .axis { fill: #7a849c; font-size: 11px; }
+    .track { fill: #151d35; stroke: #26304d; }
+    .fill-base { fill: #5d6883; }
+    .fill-best { fill: #89ccec; }
+    .val { fill: #b0b8cc; font-size: 14px; }
+    .val-best { fill: #89ccec; font-size: 14px; }
+    .step-meta { fill: #7a849c; font-size: 11.5px; letter-spacing: 1.6px; }
+    .step-title { fill: #e9ecf4; font-size: 21px; }
+    .step-title-muted { fill: #b0b8cc; font-size: 21px; }
+    .mark { fill: #fcaf17; }
+    .mark-line { stroke: #fcaf17; }
+    .muted-line { stroke: #26304d; }
+    .dot-open { fill: #0e1426; stroke: #fcaf17; stroke-width: 1.6; }
+    .dot-planned { fill: #0e1426; stroke: #7a849c; stroke-width: 1.6; }
+    .ping { fill: none; stroke: #fcaf17; stroke-width: 1.2; }
+
+    .grow { transform-box: fill-box; transform-origin: left center; animation: grow 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s both; }
+    @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    .ping { transform-box: fill-box; transform-origin: center; animation: ping 2.2s cubic-bezier(0.2, 0.7, 0.2, 1) infinite; }
+    @keyframes ping { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2.2); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <rect width="1200" height="320" rx="20" class="bg"/>
+  <rect x="0.5" y="0.5" width="1199" height="319" rx="19.5" class="frame"/>
+
+  <text x="56" y="72" class="mono eyebrow">FIRST RESULT · PUBMED 20K RCT</text>
+  <text x="56" y="120" class="serif title">Domain pretraining <tspan class="title-em">helps</tspan></text>
+  <text x="56" y="158" class="serif body">Labelling each sentence of a clinical-trial abstract by its</text>
+  <text x="56" y="184" class="serif body">role, SciBERT beat general-domain BERT by 1.45 points.</text>
+
+  <text x="56" y="228" class="mono label">BERT</text>
+  <rect x="150.5" y="217.5" width="379" height="11" rx="5.5" class="track"/>
+  <rect x="151" y="218" width="159" height="10" rx="5" class="fill-base grow"/>
+  <text x="600" y="228" text-anchor="end" class="mono val">84.20%</text>
+
+  <text x="56" y="260" class="mono label">SCIBERT</text>
+  <rect x="150.5" y="249.5" width="379" height="11" rx="5.5" class="track"/>
+  <rect x="151" y="250" width="214" height="10" rx="5" class="fill-best grow"/>
+  <text x="600" y="260" text-anchor="end" class="mono val-best">85.65%</text>
+
+  <text x="151" y="288" class="mono axis">80%</text>
+  <text x="340" y="288" text-anchor="middle" class="mono axis">85%</text>
+  <text x="529" y="288" text-anchor="end" class="mono axis">90%</text>
+
+  <line x1="664" x2="664" y1="52" y2="268" class="rule"/>
+
+  <text x="712" y="72" class="mono eyebrow">ROADMAP</text>
+
+  <line x1="720" x2="720" y1="118" y2="184" class="mark-line" stroke-width="1.6"/>
+  <line x1="720" x2="720" y1="184" y2="250" class="muted-line" stroke-width="1.6"/>
+
+  <circle cx="720" cy="118" r="8" class="mark"/>
+  <text x="748" y="112" class="mono step-meta">PHASE 1 · COMPLETED</text>
+  <text x="748" y="140" class="serif step-title">Transformer fine-tuning</text>
+
+  <circle cx="720" cy="184" r="8" class="ping"/>
+  <circle cx="720" cy="184" r="8" class="dot-open"/>
+  <path d="M720 176a8 8 0 0 0 0 16z" class="mark"/>
+  <text x="748" y="178" class="mono step-meta">PHASE 2 · IN PROGRESS</text>
+  <text x="748" y="206" class="serif step-title">Multi-label SSC with LLMs</text>
+
+  <circle cx="720" cy="250" r="8" class="dot-planned"/>
+  <text x="748" y="244" class="mono step-meta">PHASE 3 · PLANNED</text>
+  <text x="748" y="272" class="serif step-title-muted">Context-aware framework</text>
+</svg>

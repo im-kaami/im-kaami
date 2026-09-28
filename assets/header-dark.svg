@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Muhammad Ikram Hafeez</title>
+  <desc id="desc">AI research, biomedical NLP and data systems. Óbuda University and Xerox, Budapest.</desc>
+  <style>
+    .bg { fill: #0e1426; }
+    .frame { fill: none; stroke: #26304d; }
+    .dot { fill: rgba(233, 236, 244, 0.09); }
+    .gold { fill: #fcaf17; }
+    .sky { fill: #89ccec; }
+    .logo-bg { fill: #25356b; stroke: rgba(255, 255, 255, 0.14); stroke-width: 1.2; }
+    .logo-txt { fill: #ffffff; }
+    .logo-i { fill: #fcaf17; }
+    .panel { fill: #151d35; stroke: #26304d; }
+    .rule { stroke: #26304d; }
+    .serif { font-family: Newsreader, "Iowan Old Style", Charter, Georgia, "Times New Roman", serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
+    .eyebrow { fill: #89ccec; font-size: 14px; letter-spacing: 2.8px; }
+    .name { fill: #e9ecf4; font-size: 60px; letter-spacing: -1.4px; }
+    .name-em { fill: #89ccec; font-style: italic; }
+    .lede { fill: #b0b8cc; font-size: 23px; }
+    .meta { fill: #7a849c; font-size: 13px; letter-spacing: 2.2px; }
+    .meta-sep { fill: #fcaf17; }
+    .label { fill: #7a849c; font-size: 11px; letter-spacing: 1.2px; }
+    .bar { fill: #26304d; }
+    .score { fill: #fcaf17; font-size: 30px; }
+
+    .rise { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+    .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.15s; } .d3 { animation-delay: 0.25s; }
+    .d4 { animation-delay: 0.35s; } .d5 { animation-delay: 0.45s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+    .ln .bar { animation: bar-hl 10s ease-in-out infinite; }
+    .ln .label { animation: label-hl 10s ease-in-out infinite; }
+    .l1 * { animation-delay: 1s !important; } .l2 * { animation-delay: 3s !important; }
+    .l3 * { animation-delay: 5s !important; } .l4 * { animation-delay: 7s !important; }
+    .l5 * { animation-delay: 9s !important; }
+    @keyframes bar-hl { 0%, 100% { fill: #26304d; } 4%, 16% { fill: #89ccec; } 22% { fill: #26304d; } }
+    @keyframes label-hl { 0%, 100% { fill: #7a849c; } 4%, 16% { fill: #89ccec; } 22% { fill: #7a849c; } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <defs>
+    <clipPath id="card"><rect width="1200" height="380" rx="20"/></clipPath>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="11" cy="11" r="1.1" class="dot"/></pattern>
+    <linearGradient id="fade" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0.35" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="fade-mask"><rect width="1200" height="380" fill="url(#fade)"/></mask>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="380" class="bg"/>
+    <rect width="1200" height="380" fill="url(#dots)" mask="url(#fade-mask)"/>
+    <rect width="6" height="190" class="gold"/>
+    <rect y="190" width="6" height="190" class="sky"/>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="379" rx="19.5" class="frame"/>
+
+  <g class="rise d1">
+    <g transform="translate(58 50)">
+      <path d="M6 62V31a26 26 0 0 1 52 0v31z" class="logo-bg"/>
+      <circle cx="32" cy="16" r="2.6" class="gold"/>
+      <text x="32.5" y="49" text-anchor="middle" class="serif logo-txt" font-size="15.5" font-weight="500" letter-spacing="0.6">M<tspan class="logo-i" font-weight="700">I</tspan>H</text>
+    </g>
+    <text x="140" y="94" class="mono eyebrow">AI RESEARCH · BIOMEDICAL NLP · DATA SYSTEMS</text>
+  </g>
+
+  <text x="60" y="206" class="serif name rise d2">Muhammad Ikram <tspan class="name-em">Hafeez</tspan></text>
+
+  <g class="serif lede rise d3">
+    <text x="62" y="254">I study how language models read scientific text,</text>
+    <text x="62" y="286">and build the data systems behind real operations.</text>
+  </g>
+
+  <text x="62" y="334" class="mono meta rise d4">BUDAPEST <tspan class="meta-sep">/</tspan> ÓBUDA UNIVERSITY <tspan class="meta-sep">/</tspan> XEROX</text>
+
+  <g class="rise d5">
+    <rect x="820.5" y="56.5" width="319" height="267" rx="14" class="panel"/>
+    <text x="844" y="90" class="mono label">PUBMED 20K RCT · ABSTRACT</text>
+    <line x1="844" x2="1116" y1="106" y2="106" class="rule"/>
+
+    <g class="ln l1"><text x="844" y="134" class="mono label">BACKGROUND</text><rect x="946" y="126" width="170" height="8" rx="4" class="bar"/></g>
+    <g class="ln l2"><text x="844" y="162" class="mono label">OBJECTIVE</text><rect x="946" y="154" width="118" height="8" rx="4" class="bar"/></g>
+    <g class="ln l3"><text x="844" y="190" class="mono label">METHODS</text><rect x="946" y="182" width="155" height="8" rx="4" class="bar"/></g>
+    <g class="ln l4"><text x="844" y="218" class="mono label">RESULTS</text><rect x="946" y="210" width="136" height="8" rx="4" class="bar"/></g>
+    <g class="ln l5"><text x="844" y="246" class="mono label">CONCLUSIONS</text><rect x="946" y="238" width="96" height="8" rx="4" class="bar"/></g>
+
+    <line x1="844" x2="1116" y1="266" y2="266" class="rule"/>
+    <text x="844" y="302" class="mono label">SCIBERT ACCURACY</text>
+    <text x="1116" y="304" text-anchor="end" class="serif score">85.65%</text>
+  </g>
+</svg>
