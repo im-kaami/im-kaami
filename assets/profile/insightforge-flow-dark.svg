@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 420 200" role="img" aria-labelledby="title desc">
+  <title id="title">InsightForge AI — Process Flow</title>
+  <desc id="desc">Four-stage process: natural language business query, code computes results via DuckDB SQL and Python, summary tables and charts are generated, and numeric checks flag discrepancies for human review.</desc>
+  <style>
+    .bg { fill: #0d1117; }
+    .frame { fill: none; stroke: #30363d; stroke-width: 1; }
+    .box { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+    .box-check { fill: rgba(56, 139, 253, 0.08); stroke: #388bfd; stroke-width: 1.2; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .step-tag { fill: #8b949e; font-size: 16px; font-weight: 600; letter-spacing: 0.8px; }
+    .title { fill: #f0f6fc; font-size: 17px; font-weight: 600; }
+    .desc { fill: #8b949e; font-size: 16px; }
+    .desc-accent { fill: #58a6ff; font-size: 16px; font-weight: 500; }
+    .arrow { stroke: #58a6ff; stroke-width: 1.5; fill: none; }
+    .arrow-h { fill: #58a6ff; }
+  </style>
+
+  <rect width="420" height="200" rx="8" class="bg"/>
+  <rect x="0.5" y="0.5" width="419" height="199" rx="7.5" class="frame"/>
+
+  <!-- Step 1: Input (Top-Left) -->
+  <g transform="translate(16 16)">
+    <rect width="186" height="76" rx="6" class="box"/>
+    <text x="12" y="24" class="mono step-tag">01 · INPUT</text>
+    <text x="12" y="47" class="sans title">Business Query</text>
+    <text x="12" y="67" class="sans desc">Natural prompt</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 (Horizontal Right) -->
+  <line x1="202" y1="54" x2="213" y2="54" class="arrow"/>
+  <polygon points="213,51 217,54 213,57" class="arrow-h"/>
+
+  <!-- Step 2: Code Computes (Top-Right) -->
+  <g transform="translate(218 16)">
+    <rect width="186" height="76" rx="6" class="box"/>
+    <text x="12" y="24" class="mono step-tag">02 · COMPUTE</text>
+    <text x="12" y="47" class="sans title">Code Computes</text>
+    <text x="12" y="67" class="mono desc-accent">DuckDB + Python</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 (Vertical Down) -->
+  <line x1="311" y1="92" x2="311" y2="103" class="arrow"/>
+  <polygon points="308,103 311,107 314,103" class="arrow-h"/>
+
+  <!-- Step 3: Generation (Bottom-Right) -->
+  <g transform="translate(218 108)">
+    <rect width="186" height="76" rx="6" class="box"/>
+    <text x="12" y="24" class="mono step-tag">03 · OUTPUT</text>
+    <text x="12" y="47" class="sans title">Summary &amp; Charts</text>
+    <text x="12" y="67" class="sans desc">Tables and text</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 (Horizontal Left) -->
+  <line x1="218" y1="146" x2="207" y2="146" class="arrow"/>
+  <polygon points="207,143 203,146 207,149" class="arrow-h"/>
+
+  <!-- Step 4: Numeric Checks (Bottom-Left) -->
+  <g transform="translate(16 108)">
+    <rect width="186" height="76" rx="6" class="box-check"/>
+    <text x="12" y="24" class="mono step-tag" fill="#58a6ff">04 · CHECKS</text>
+    <text x="12" y="47" class="sans title">Numeric Checks</text>
+    <text x="12" y="67" class="sans desc-accent">Flags mismatches</text>
+  </g>
+</svg>

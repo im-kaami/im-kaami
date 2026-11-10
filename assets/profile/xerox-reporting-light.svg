@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 420 160" role="img" aria-labelledby="title desc">
+  <title id="title">Xerox Client Delivery — Report Preparation Timing</title>
+  <desc id="desc">Measured report preparation per account reduced from approximately 30 minutes to 1 minute per account. Team supports 100+ EMEA enterprise accounts across distinct workflows.</desc>
+  <style>
+    .bg { fill: #fcfcfb; }
+    .frame { fill: none; stroke: #d0d7de; stroke-width: 1; }
+    .box-manual { fill: #ffffff; stroke: #d0d7de; stroke-width: 1; }
+    .box-auto { fill: rgba(9, 105, 218, 0.06); stroke: #0969da; stroke-width: 1.2; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .serif { font-family: Newsreader, "Iowan Old Style", Charter, Georgia, "Times New Roman", serif; }
+    .tag-manual { fill: #656d76; font-size: 16px; font-weight: 600; letter-spacing: 0.8px; }
+    .tag-auto { fill: #0969da; font-size: 16px; font-weight: 600; letter-spacing: 0.8px; }
+    .time-manual { fill: #656d76; font-size: 28px; font-weight: 600; }
+    .time-auto { fill: #1a7f37; font-size: 28px; font-weight: 600; }
+    .desc-manual { fill: #656d76; font-size: 16px; }
+    .desc-auto { fill: #1f2328; font-size: 16px; font-weight: 500; }
+    .arrow { stroke: #0969da; stroke-width: 1.5; fill: none; }
+    .arrow-h { fill: #0969da; }
+    .caption { fill: #656d76; font-size: 16px; }
+  </style>
+
+  <rect width="420" height="160" rx="8" class="bg"/>
+  <rect x="0.5" y="0.5" width="419" height="159" rx="7.5" class="frame"/>
+
+  <!-- Manual Card -->
+  <g transform="translate(16 16)">
+    <rect width="176" height="92" rx="6" class="box-manual"/>
+    <text x="12" y="24" class="mono tag-manual">01 · MANUAL</text>
+    <text x="12" y="56" class="serif time-manual">~30 min</text>
+    <text x="12" y="78" class="sans desc-manual">per account assembly</text>
+  </g>
+
+  <!-- Flow Arrow -->
+  <line x1="196" y1="62" x2="223" y2="62" class="arrow"/>
+  <polygon points="223,59 227,62 223,65" class="arrow-h"/>
+
+  <!-- Automated Card -->
+  <g transform="translate(228 16)">
+    <rect width="176" height="92" rx="6" class="box-auto"/>
+    <text x="12" y="24" class="mono tag-auto">02 · AUTOMATED</text>
+    <text x="12" y="56" class="serif time-auto">~1 min</text>
+    <text x="12" y="78" class="sans desc-auto">per account approx</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="210" y="138" text-anchor="middle" class="mono caption">Weekly report prep · 100+ EMEA accounts</text>
+</svg>

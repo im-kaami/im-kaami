@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 420 175" role="img" aria-labelledby="title desc">
+  <title id="title">BIORC800 Study — BioLinkBERT Contextual Classification Results</title>
+  <desc id="desc">Direct comparison of BioLinkBERT on a shared 0 to 100 percent axis: target-only mean test Micro-F1 is 87.111 percent, improving to 90.864 percent (+3.753 pp) with context across 3 seeds on official splits.</desc>
+  <style>
+    .bg { fill: #0d1117; }
+    .frame { fill: none; stroke: #30363d; stroke-width: 1; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .tag { fill: #58a6ff; font-size: 16px; font-weight: 600; letter-spacing: 0.8px; }
+    .label-muted { fill: #8b949e; font-size: 16px; font-weight: 500; }
+    .label-active { fill: #f0f6fc; font-size: 16px; font-weight: 600; }
+    .val-muted { fill: #8b949e; font-size: 16px; font-weight: 500; }
+    .val-accent { fill: #3fb950; font-size: 16px; font-weight: 600; }
+    .track { fill: #161b22; stroke: #30363d; stroke-width: 1; }
+    .bar-base { fill: #586069; }
+    .bar-accent { fill: #238636; }
+    .axis { stroke: #30363d; stroke-width: 1; }
+    .tick-label { fill: #8b949e; font-size: 16px; }
+    .gain-pill { fill: rgba(63, 185, 80, 0.15); stroke: rgba(63, 185, 80, 0.4); }
+    .gain-txt { fill: #3fb950; font-size: 16px; font-weight: 600; }
+    .caption { fill: #8b949e; font-size: 16px; }
+  </style>
+
+  <rect width="420" height="175" rx="8" class="bg"/>
+  <rect x="0.5" y="0.5" width="419" height="174" rx="7.5" class="frame"/>
+
+  <!-- Header -->
+  <text x="16" y="28" class="mono tag">BIOLINKBERT · TEST MICRO-F1</text>
+  
+  <!-- Gain Pill -->
+  <rect x="312" y="10" width="92" height="26" rx="4" class="gain-pill"/>
+  <text x="358" y="28" text-anchor="middle" class="mono gain-txt">+3.75 pp</text>
+
+  <!-- Row 1: Target-only -->
+  <text x="16" y="63" class="sans label-muted">Target-only</text>
+  <rect x="122" y="50" width="210" height="16" rx="3" class="track"/>
+  <rect x="122" y="50" width="182.9" height="16" rx="3" class="bar-base"/>
+  <text x="340" y="63" class="mono val-muted">87.11%</text>
+
+  <!-- Row 2: With context -->
+  <text x="16" y="99" class="sans label-active">With context</text>
+  <rect x="122" y="86" width="210" height="16" rx="3" class="track"/>
+  <rect x="122" y="86" width="190.8" height="16" rx="3" class="bar-accent"/>
+  <text x="340" y="99" class="mono val-accent">90.86%</text>
+
+  <!-- 0-100% Axis -->
+  <line x1="122" y1="114" x2="332" y2="114" class="axis"/>
+  <line x1="122" y1="114" x2="122" y2="119" class="axis"/>
+  <line x1="227" y1="114" x2="227" y2="119" class="axis"/>
+  <line x1="332" y1="114" x2="332" y2="119" class="axis"/>
+
+  <text x="122" y="133" text-anchor="middle" class="mono tick-label">0%</text>
+  <text x="227" y="133" text-anchor="middle" class="mono tick-label">50%</text>
+  <text x="332" y="133" text-anchor="middle" class="mono tick-label">100%</text>
+
+  <!-- Footnote -->
+  <text x="210" y="158" text-anchor="middle" class="mono caption">3 seeds (6 runs) · 18 total study runs</text>
+</svg>
