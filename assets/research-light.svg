@@ -1,80 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
-  <title id="title">Research: domain pretraining helps</title>
-  <desc id="desc">On PubMed 20k RCT, SciBERT reached 85.65% accuracy against 84.20% for BERT. Phase 1, transformer fine-tuning, is complete. Phase 2, multi-label sequential sentence classification with LLMs, is in progress. Phase 3, a context-aware framework, is planned.</desc>
+  <title id="title">Research: Context-aware sentence classification on BIORC800</title>
+  <desc id="desc">On BIORC800, adding neighbouring-sentence context improved mean test Micro-F1 across BioLinkBERT (87.11% to 90.86%), PubMedBERT (87.23% to 90.76%), and ClinicalBERT (85.85% to 89.62%). Earlier benchmark on PubMed RCT: SciBERT reached 85.65% accuracy versus 84.20% for BERT.</desc>
   <style>
     .bg { fill: #f5f7fb; }
     .frame { fill: none; stroke: #d3d9e4; }
     .rule { stroke: #dde2ec; }
     .serif { font-family: Newsreader, "Iowan Old Style", Charter, Georgia, "Times New Roman", serif; }
     .mono { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, "Cascadia Mono", Consolas, Menlo, monospace; }
-    .eyebrow { fill: #00288c; font-size: 13px; letter-spacing: 2.4px; }
-    .title { fill: #1d294d; font-size: 36px; letter-spacing: -0.6px; }
+    .eyebrow { fill: #00288c; font-size: 12px; letter-spacing: 2px; }
+    .title { fill: #1d294d; font-size: 28px; letter-spacing: -0.5px; }
     .title-em { fill: #00288c; font-style: italic; }
-    .body { fill: #3a4462; font-size: 19px; }
-    .label { fill: #3a4462; font-size: 12px; letter-spacing: 1px; }
-    .axis { fill: #58627d; font-size: 11px; }
+    .body { fill: #3a4462; font-size: 15px; }
+    .label { fill: #3a4462; font-size: 12px; letter-spacing: 0.8px; }
+    .axis { fill: #58627d; font-size: 10px; }
     .track { fill: #ffffff; stroke: #d3d9e4; }
     .fill-base { fill: #9aa3b8; }
     .fill-best { fill: #00288c; }
-    .val { fill: #3a4462; font-size: 14px; }
-    .val-best { fill: #00288c; font-size: 14px; }
-    .step-meta { fill: #58627d; font-size: 11.5px; letter-spacing: 1.6px; }
-    .step-title { fill: #1d294d; font-size: 21px; }
-    .step-title-muted { fill: #3a4462; font-size: 21px; }
-    .mark { fill: #b87d00; }
-    .mark-line { stroke: #b87d00; }
-    .muted-line { stroke: #c4cbd8; }
-    .dot-open { fill: #f5f7fb; stroke: #b87d00; stroke-width: 1.6; }
-    .dot-planned { fill: #f5f7fb; stroke: #58627d; stroke-width: 1.6; }
-    .ping { fill: none; stroke: #b87d00; stroke-width: 1.2; }
+    .val { fill: #3a4462; font-size: 12px; }
+    .val-best { fill: #00288c; font-size: 12px; font-weight: 600; }
+    .gain { fill: #b87d00; font-size: 11px; font-weight: 600; }
+    .meta { fill: #58627d; font-size: 11px; letter-spacing: 1.4px; }
 
     .grow { transform-box: fill-box; transform-origin: left center; animation: grow 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) 0.3s both; }
     @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    .ping { transform-box: fill-box; transform-origin: center; animation: ping 2.2s cubic-bezier(0.2, 0.7, 0.2, 1) infinite; }
-    @keyframes ping { from { transform: scale(1); opacity: 0.9; } to { transform: scale(2.2); opacity: 0; } }
     @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
   </style>
 
   <rect width="1200" height="320" rx="20" class="bg"/>
   <rect x="0.5" y="0.5" width="1199" height="319" rx="19.5" class="frame"/>
 
-  <text x="56" y="72" class="mono eyebrow">FIRST RESULT · PUBMED 20K RCT</text>
-  <text x="56" y="120" class="serif title">Domain pretraining <tspan class="title-em">helps</tspan></text>
-  <text x="56" y="158" class="serif body">Labelling each sentence of a clinical-trial abstract by its</text>
-  <text x="56" y="184" class="serif body">role, SciBERT beat general-domain BERT by 1.45 points.</text>
+  <!-- Left Side: BIORC800 Study (Primary) -->
+  <text x="56" y="46" class="mono eyebrow">PRIMARY BENCHMARK · BIORC800 · 18 RUNS (3 SEEDS)</text>
+  <text x="56" y="82" class="serif title">Surrounding context <tspan class="title-em">boosts Micro-F1</tspan></text>
+  <text x="56" y="106" class="serif body">Mean test Micro-F1 on preserved official splits (target-only vs. with context):</text>
 
-  <text x="56" y="228" class="mono label">BERT</text>
-  <rect x="150.5" y="217.5" width="379" height="11" rx="5.5" class="track"/>
-  <rect x="151" y="218" width="159" height="10" rx="5" class="fill-base grow"/>
-  <text x="600" y="228" text-anchor="end" class="mono val">84.20%</text>
+  <!-- BioLinkBERT -->
+  <text x="56" y="142" class="mono label">BioLinkBERT</text>
+  <rect x="175" y="127" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="127" width="124.4" height="8" rx="4" class="fill-base grow"/>
+  <text x="506" y="135" class="mono val">87.11%</text>
 
-  <text x="56" y="260" class="mono label">SCIBERT</text>
-  <rect x="150.5" y="249.5" width="379" height="11" rx="5.5" class="track"/>
-  <rect x="151" y="250" width="214" height="10" rx="5" class="fill-best grow"/>
-  <text x="600" y="260" text-anchor="end" class="mono val-best">85.65%</text>
+  <rect x="175" y="139" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="139" width="274.6" height="8" rx="4" class="fill-best grow"/>
+  <text x="506" y="147" class="mono val-best">90.86%</text>
+  <text x="566" y="147" class="mono gain">+3.75 pp</text>
 
-  <text x="151" y="288" class="mono axis">80%</text>
-  <text x="340" y="288" text-anchor="middle" class="mono axis">85%</text>
-  <text x="529" y="288" text-anchor="end" class="mono axis">90%</text>
+  <!-- PubMedBERT -->
+  <text x="56" y="182" class="mono label">PubMedBERT</text>
+  <rect x="175" y="167" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="167" width="129.1" height="8" rx="4" class="fill-base grow"/>
+  <text x="506" y="175" class="mono val">87.23%</text>
 
-  <line x1="664" x2="664" y1="52" y2="268" class="rule"/>
+  <rect x="175" y="179" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="179" width="270.5" height="8" rx="4" class="fill-best grow"/>
+  <text x="506" y="187" class="mono val-best">90.76%</text>
+  <text x="566" y="187" class="mono gain">+3.53 pp</text>
 
-  <text x="712" y="72" class="mono eyebrow">ROADMAP</text>
+  <!-- ClinicalBERT -->
+  <text x="56" y="222" class="mono label">ClinicalBERT</text>
+  <rect x="175" y="207" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="207" width="74.2" height="8" rx="4" class="fill-base grow"/>
+  <text x="506" y="215" class="mono val">85.85%</text>
 
-  <line x1="720" x2="720" y1="118" y2="184" class="mark-line" stroke-width="1.6"/>
-  <line x1="720" x2="720" y1="184" y2="250" class="muted-line" stroke-width="1.6"/>
+  <rect x="175" y="219" width="320" height="8" rx="4" class="track"/>
+  <rect x="175" y="219" width="224.8" height="8" rx="4" class="fill-best grow"/>
+  <text x="506" y="227" class="mono val-best">89.62%</text>
+  <text x="566" y="227" class="mono gain">+3.76 pp</text>
 
-  <circle cx="720" cy="118" r="8" class="mark"/>
-  <text x="748" y="112" class="mono step-meta">PHASE 1 · COMPLETED</text>
-  <text x="748" y="140" class="serif step-title">Transformer fine-tuning</text>
+  <!-- Axis -->
+  <line x1="175" x2="495" y1="237" y2="237" class="rule"/>
+  <text x="175" y="250" class="mono axis">84%</text>
+  <text x="255" y="250" text-anchor="middle" class="mono axis">86%</text>
+  <text x="335" y="250" text-anchor="middle" class="mono axis">88%</text>
+  <text x="415" y="250" text-anchor="middle" class="mono axis">90%</text>
+  <text x="495" y="250" text-anchor="end" class="mono axis">92%</text>
 
-  <circle cx="720" cy="184" r="8" class="ping"/>
-  <circle cx="720" cy="184" r="8" class="dot-open"/>
-  <path d="M720 176a8 8 0 0 0 0 16z" class="mark"/>
-  <text x="748" y="178" class="mono step-meta">PHASE 2 · IN PROGRESS</text>
-  <text x="748" y="206" class="serif step-title">Multi-label SSC with LLMs</text>
+  <!-- Legend -->
+  <rect x="56" y="274" width="10" height="10" rx="2" class="fill-base"/>
+  <text x="72" y="283" class="mono axis">Target-only</text>
+  <rect x="160" y="274" width="10" height="10" rx="2" class="fill-best"/>
+  <text x="176" y="283" class="mono axis">With context (mean)</text>
+  <text x="325" y="283" class="mono gain">Peak BioLinkBERT: 91.18%</text>
 
-  <circle cx="720" cy="250" r="8" class="dot-planned"/>
-  <text x="748" y="244" class="mono step-meta">PHASE 3 · PLANNED</text>
-  <text x="748" y="272" class="serif step-title-muted">Context-aware framework</text>
+  <!-- Divider -->
+  <line x1="656" x2="656" y1="36" y2="284" class="rule"/>
+
+  <!-- Right Side: Earlier Benchmark (Secondary) & Frontiers -->
+  <text x="696" y="46" class="mono eyebrow">EARLIER BENCHMARK · PUBMED 20K RCT</text>
+  <text x="696" y="82" class="serif title">Domain pretraining <tspan class="title-em">helps</tspan></text>
+  <text x="696" y="106" class="serif body">Sequential sentence classification on 20k subset:</text>
+
+  <!-- BERT vs SciBERT -->
+  <text x="696" y="142" class="mono label">BERT</text>
+  <rect x="770" y="133" width="260" height="10" rx="5" class="track"/>
+  <rect x="770" y="133" width="109.2" height="10" rx="5" class="fill-base grow"/>
+  <text x="1042" y="142" class="mono val">84.20%</text>
+
+  <text x="696" y="174" class="mono label">SciBERT</text>
+  <rect x="770" y="165" width="260" height="10" rx="5" class="track"/>
+  <rect x="770" y="165" width="146.9" height="10" rx="5" class="fill-best grow"/>
+  <text x="1042" y="174" class="mono val-best">85.65%</text>
+  <text x="1100" y="174" class="mono gain">+1.45 pp</text>
+
+  <!-- Mini axis -->
+  <text x="770" y="196" class="mono axis">80%</text>
+  <text x="900" y="196" text-anchor="middle" class="mono axis">85%</text>
+  <text x="1030" y="196" text-anchor="end" class="mono axis">90%</text>
+
+  <!-- Ongoing Research Divider & Text -->
+  <line x1="696" x2="1144" y1="216" y2="216" class="rule"/>
+  <text x="696" y="240" class="mono meta">ONGOING RESEARCH</text>
+  <text x="696" y="264" class="serif body">Multi-role sentence architectures &amp; loss formulations</text>
+  <text x="696" y="286" class="serif body">to address blended rhetorical roles in clinical abstracts.</text>
 </svg>
